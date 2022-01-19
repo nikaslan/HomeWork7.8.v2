@@ -12,5 +12,7 @@ namespace HomeWork7._8.v2
         public DbSet<Employee> Employees { get; set; }
 
         public ApplicationContext() : base("DefaultConnection") { }
+
+        
     }
 }

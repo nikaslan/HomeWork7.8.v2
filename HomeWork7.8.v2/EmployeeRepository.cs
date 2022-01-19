@@ -11,16 +11,13 @@ namespace HomeWork7._8.v2
     {
         #region Объявление перменных и инициализация
 
-        ApplicationContext db = new ApplicationContext(); // создали объект ссылающийся на базу данных
+        ApplicationContext db; // создали объект ссылающийся на базу данных
         
         /// <summary>
         /// Массив переменных типа Employee
         /// </summary>
-        private Employee[] employees;
-        /// <summary>
-        /// путь до файла базы
-        /// </summary>
-        private string databasePath;
+        private Employee[] employees;       
+        
         /// <summary>
         /// Размер базы данных (количество строчек в файле)
         /// </summary>
@@ -33,9 +30,11 @@ namespace HomeWork7._8.v2
         /// <param name="filePath"></param>
         public EmployeeRepository()
         {
+            db = new ApplicationContext();
             this.databaseSize = db.Employees.Count(); // определяем размер массива путем считывания размера таблицы Employees
             this.employees = new Employee[databaseSize];
             this.titles = "ID | Добавлен        | Имя                      | Возраст | Рост | Дата рож. | Место рождения";
+            LoadDatabase();
         }
         #endregion
 
@@ -119,10 +118,21 @@ namespace HomeWork7._8.v2
                     else
                     {
                         employees[line] = newEntry; // перезапись элемента массива под номером = line новыми данными
-                        //db.Employees.Find(employees[line].Id) = db.Employees.Add(newEntry);
+                        var query =
+                            from emp in db.Employees
+                            where emp.Id == newEntry.Id
+                            select emp;
+
+                        foreach(Employee emp in query)
+                        {
+                            emp.Name = newEntry.Name;
+                            emp.Height = newEntry.Height;
+                            emp.BirthDay = newEntry.BirthDay;
+                            emp.BirthPlace = newEntry.BirthPlace;
+                        }
+                        //db.SaveChanges();
                     }
-
-
+                    db.SaveChanges();
                     Console.WriteLine("\nЗапись внесена");
                     break;
                 }

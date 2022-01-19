@@ -17,7 +17,7 @@ namespace HomeWork7._8.v2
 
             
 
-            //EmployeeRepository repository = new EmployeeRepository(filepath);
+            EmployeeRepository repository = new EmployeeRepository();
 
             while (true)
             {
@@ -36,7 +36,7 @@ namespace HomeWork7._8.v2
                 if (((char)key) == '1')
                 {
                     Console.Clear();
-                    Console.WriteLine("Функционал еще не реализован");
+                    repository.PrintDatabaseToConsole();
                     Console.WriteLine("\nНажмите любую кнопку для возврата на главный экран.");
                     Console.ReadKey(true);
                     Console.Clear();
@@ -56,7 +56,7 @@ namespace HomeWork7._8.v2
                 {
                     Console.Clear();
                     Console.WriteLine("Функционал еще не реализован");
-                    //repository.AddEmployee();
+                    repository.AddEmployee();
                     Console.WriteLine("\nНажмите любую кнопку для возврата на главный экран.");
                     Console.ReadKey(true);
                     Console.Clear();

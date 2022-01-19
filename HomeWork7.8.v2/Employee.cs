@@ -33,7 +33,7 @@ namespace HomeWork7._8.v2
         /// <param name="bDay">День рождения сотрудника</param>
         /// <param name="bPlace">Место рождения сотрудника</param>
         /// <param name="fileString">Строчка в файле базы</param>
-
+        public Employee() { }
         public Employee(string fullName, int height, DateTime bDay, string bPlace)
         {
             
@@ -55,15 +55,15 @@ namespace HomeWork7._8.v2
         }
         
         #region Объявление автосвойств
-        public int Id { get; private set; }
+        public int Id { get; set; }
         /// <summary>
         /// Дата создания записи в базе
         /// </summary>
-        public DateTime LastModified { get; private set; }
+        public DateTime LastModified { get; set; }
         /// <summary>
         /// Ф.И.О сотрудника
         /// </summary>
-        public string Name { get; private set; }
+        public string Name { get; set; }
         /// <summary>
         /// Возраст сотрудника
         /// </summary>
@@ -75,15 +75,15 @@ namespace HomeWork7._8.v2
         /// <summary>
         /// Рост сотрудника
         /// </summary>
-        public int Height { get; private set; }
+        public int Height { get; set; }
         /// <summary>
         /// Дата рождения сотрудника
         /// </summary>
-        public DateTime BirthDay { get; private set; }
+        public DateTime BirthDay { get; set; }
         /// <summary>
         /// Место рождения сотрудника
         /// </summary>
-        public string BirthPlace { get; private set; }
+        public string BirthPlace { get; set; }
         #endregion
     }
 }

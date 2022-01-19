@@ -1,0 +1,17 @@
+C:\Users\User\source\repos\HomeWork7.8.v2\HomeWork7.8.v2\bin\Debug\companydatabase.db
+C:\Users\User\source\repos\HomeWork7.8.v2\HomeWork7.8.v2\bin\Debug\HomeWork7.8.v2.exe.config
+C:\Users\User\source\repos\HomeWork7.8.v2\HomeWork7.8.v2\bin\Debug\HomeWork7.8.v2.exe
+C:\Users\User\source\repos\HomeWork7.8.v2\HomeWork7.8.v2\bin\Debug\HomeWork7.8.v2.pdb
+C:\Users\User\source\repos\HomeWork7.8.v2\HomeWork7.8.v2\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\HomeWork7.8.v2\HomeWork7.8.v2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\HomeWork7.8.v2\HomeWork7.8.v2\bin\Debug\System.Data.SQLite.dll
+C:\Users\User\source\repos\HomeWork7.8.v2\HomeWork7.8.v2\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\User\source\repos\HomeWork7.8.v2\HomeWork7.8.v2\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\User\source\repos\HomeWork7.8.v2\HomeWork7.8.v2\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\HomeWork7.8.v2\HomeWork7.8.v2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\source\repos\HomeWork7.8.v2\HomeWork7.8.v2\bin\Debug\System.Data.SQLite.xml
+C:\Users\User\source\repos\HomeWork7.8.v2\HomeWork7.8.v2\obj\Debug\HomeWork7.8.v2.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\HomeWork7.8.v2\HomeWork7.8.v2\obj\Debug\HomeWork7.8.v2.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\HomeWork7.8.v2\HomeWork7.8.v2\obj\Debug\HomeWork7.8.v2.csproj.CopyComplete
+C:\Users\User\source\repos\HomeWork7.8.v2\HomeWork7.8.v2\obj\Debug\HomeWork7.8.v2.exe
+C:\Users\User\source\repos\HomeWork7.8.v2\HomeWork7.8.v2\obj\Debug\HomeWork7.8.v2.pdb
