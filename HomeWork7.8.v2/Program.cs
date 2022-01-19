@@ -30,7 +30,7 @@ namespace HomeWork7._8.v2
                 //    break;
                 //}
 
-                Console.WriteLine("Нажмите 1 для вывода существующих записей\nНажмите 2 для поиска определенной записи\nНажмите 3 для добавления записи\nНажмите 4 для вывода записей за определенный период\nНажмите 5 для вывода записей в сортированном виде\nНажмите Esc для выхода из программы.");
+                Console.WriteLine("Нажмите 1 для вывода существующих записей\nНажмите 2 для поиска определенной записи\nНажмите 3 для добавления записи\nНажмите Esc для выхода из программы.");
 
                 var key = Console.ReadKey(true).Key;
                 if (((char)key) == '1')
@@ -45,8 +45,7 @@ namespace HomeWork7._8.v2
                 else if (((char)key) == '2')
                 {
                     Console.Clear();
-                    Console.WriteLine("Функционал еще не реализован");
-                    //repository.ViewAndEditEmployee();
+                    repository.ViewAndEditEmployee();
                     Console.WriteLine("\nНажмите любую кнопку для возврата на главный экран.");
                     Console.ReadKey(true);
                     Console.Clear();
@@ -55,28 +54,7 @@ namespace HomeWork7._8.v2
                 else if (((char)key) == '3')
                 {
                     Console.Clear();
-                    Console.WriteLine("Функционал еще не реализован");
                     repository.AddEmployee();
-                    Console.WriteLine("\nНажмите любую кнопку для возврата на главный экран.");
-                    Console.ReadKey(true);
-                    Console.Clear();
-                    continue;
-                }
-                else if (((char)key) == '4')
-                {
-                    Console.Clear();
-                    Console.WriteLine("Функционал еще не реализован");
-                    //repository.PrintDateRange();
-                    Console.WriteLine("\nНажмите любую кнопку для возврата на главный экран.");
-                    Console.ReadKey(true);
-                    Console.Clear();
-                    continue;
-                }
-                else if (((char)key) == '5')
-                {
-                    Console.Clear();
-                    Console.WriteLine("Функционал еще не реализован");
-                    //repository.PrintSorted();
                     Console.WriteLine("\nНажмите любую кнопку для возврата на главный экран.");
                     Console.ReadKey(true);
                     Console.Clear();

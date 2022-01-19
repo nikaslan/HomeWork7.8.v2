@@ -129,6 +129,7 @@ namespace HomeWork7._8.v2
                             emp.Height = newEntry.Height;
                             emp.BirthDay = newEntry.BirthDay;
                             emp.BirthPlace = newEntry.BirthPlace;
+                            emp.LastModified = DateTime.Now;
                         }
                         //db.SaveChanges();
                     }
@@ -369,115 +370,6 @@ namespace HomeWork7._8.v2
         }
 
         #endregion
-
-        #region Дополнительные функции вывода в консоль
-        /// <summary>
-        /// Вывод записей, сделанных в определенном диапазоне дат
-        /// </summary>
-        public void PrintDateRange()
-        {
-            DateTime startDate; // дата начала диапазона
-            DateTime endDate; // дата конца диапазона
-
-            Console.WriteLine("Введите дату начала диапазона");
-            while (true)
-            {
-
-                if (DateTime.TryParse(Console.ReadLine(), out startDate))
-                {
-
-                    if (startDate > DateTime.Now)
-                    {
-                        Console.WriteLine("Дата начала диапазона должна быть в прошлом.");
-                        continue;
-                    }
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Некорректный формат времени.");
-                }
-
-            }
-            Console.WriteLine("Введите дату конца диапазона");
-            while (true)
-            {
-
-                if (DateTime.TryParse(Console.ReadLine(), out endDate))
-                {
-
-                    if (startDate > endDate)
-                    {
-                        Console.WriteLine("Дата конца диапазона не может быть раньше, чем дата начала диапазона");
-                        continue;
-                    }
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Некорректный формат времени.");
-                }
-
-            }
-
-            /// я думал рализовать ли тут сортировку записей перед выводом
-            /// Но решил что сделаю два разных подхода. Т.к. сортировку я буду реализовывать в специальном методе
-            /// то в данном методе сделаю упрощенную версию, без сортировки
-            Console.WriteLine("\nНайденные записи:");
-            Console.WriteLine($"\n{titles}");
-
-            foreach (Employee employee in employees)
-            {
-                if (employee.LastModified >= startDate && employee.LastModified <= endDate)
-                {
-                    PrintEmployee(employee);
-                }
-            }
-
-        }
-
-        /// <summary>
-        /// Вывод записей в отсортированном виде
-        /// </summary>
-        public void PrintSorted()
-        {
-            // запрашиваю по какому критерию пользователь хочет увидеть сортировку. Для практики запрашиваю поля с разными типами данных. Остальные будут реализовываться так же
-            Console.WriteLine("Пожалуйста выберите по какому критерию хотите вывести отсортированные данные:");
-            Console.WriteLine("Нажмите 1 для сортировки по дате создания записей"); // сортировка даты. Так же сортировались бы данные по дате рождения
-            Console.WriteLine("Нажмите 2 для сортировки по Ф.И.О сотрудников"); // сортировка строки. Так же сортировались бы данные по месту рождения
-            Console.WriteLine("Нажмите 3 для сортировки по росту сотрудников"); // сортировка инт. Так же сортировались бы данные по возрасту
-
-            // сортируем массив данных, записывая во пременный массив
-            while (true)
-            {
-                var key = Console.ReadKey(true).Key;
-                if (((char)key) == '1')
-                {
-                    Console.Clear();
-
-                    Console.ReadKey(true);
-                    Console.Clear();
-                    continue;
-                }
-                else if (((char)key) == '2')
-                {
-                    Console.Clear();
-
-                    Console.Clear();
-                    continue;
-                }
-                else if (((char)key) == '3')
-                {
-                    Console.Clear();
-
-                    Console.ReadKey(true);
-                    Console.Clear();
-                    continue;
-                }
-            }
-            // выводим в консоль получившийся временный массив
-        }
-
-        #endregion
+       
     }
 }
